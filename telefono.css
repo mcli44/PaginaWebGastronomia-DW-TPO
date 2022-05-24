@@ -235,3 +235,45 @@ footer {
 .LMp{
     margin-top: 3em;
 }
+
+.pdm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.8em;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+.pe1{
+    padding: 10px;
+    width: 100%;
+}
+
+.pe2{
+    padding: 10px;
+    width: 100%;
+    height: 10em;
+}
+
+.pp1{
+    font-size: 18px;
+}
+
+.pacodiv{
+    margin-top: 0.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.pb1{
+    width: 5em;
+}
+
+.pb2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+}
