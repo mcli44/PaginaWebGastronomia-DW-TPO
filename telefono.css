@@ -31,7 +31,7 @@ header{
     font-size: 40px;
     text-decoration:none;
     padding-left: 0.7em;
-    width: 6em;
+    width: 6.5em;
 
     
     
@@ -189,14 +189,14 @@ footer {
     .Nombre{
         /*background-color: rgb(0, 156, 177);*/
         padding-left: 1.1em;
-        width: 6em;
+        width: 6.7em;
     }
 }
 
 @media (min-width: 405px) {   
     .Nombre{
         padding-left: 1.5em;
-    width: 7em;
+        width: 7.3em;
     }
 }
 
