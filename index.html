@@ -12,10 +12,9 @@
         <div class="dropdown">
             <button class="dropbtn"><strong>≡</strong></button>
             <div class="dropdown-content">
-              <a href="menu.html">Menu</a>
+              <a href="menu.html">Productos</a>
               <a href="direcion.html">Contacto y dirección</a>
               <a href="#">Testimonios</a>
-              <a href="#">Galeria</a>
               <a href="presupuesto.html">Presupuesto</a> 
             </div>
         </div>
@@ -25,12 +24,60 @@
     </header>
 
     <div class="centrar">
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img class="imgLocal" src="Imagenes/Foto del local.jpg" alt="Foto del local">
+            </div>
+            <div class="mySlides fade">
+                <img class="imgLocal" src="Imagenes/facturas 1080x1080.jpg" alt="Foto del local">
+            </div>
+            <div class="mySlides fade">
+                <img class="imgLocal" src="Imagenes/pastafrola 960x960.jpg" alt="Foto del local">
+            </div>
+            <div class="mySlides fade">
+                <img class="imgLocal" src="Imagenes/Alfajores 960x960.jpg" alt="Foto del local">
+            </div>
+            <div class="mySlides fade">
+                <img class="imgLocal" src="Imagenes/Galletita 525x525.jpg" alt="Foto del local">
+            </div>
+            <div class="mySlides fade">
+                <img class="imgLocal" src="Imagenes/Cubanitos 636x636.jpg" alt="Foto del local">
+            </div>
+            <script>
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  
+                  slides[slideIndex-1].style.display = "flex";
+                   
+                  setTimeout(showSlides, 3500); 
+                }
+            </script>
+        </div>
+
         <h1 class="nombreLocal">Pasteleria Forte</h1>
-        <a class="btMenu" href="menu.html"><strong>Ver MENU</strong></a>
-        <img class="imgLocal" src="Imagenes/Foto del local.jpg" alt="Foto del local"><br>
+        <div class="BotoneraIndex">
+            <a class="btMenu" href="menu.html"><strong>Nuestros Productos</strong></a>
+            <a class="btDireccion" href="direcion.html"><strong>Donde Encontrarnos</strong></a>
+        </div>
+
+       
+        
         <h1><strong>SOBRE NOSOTROS</strong></h1>
         <h3>En Pasteleria Forte nos dedicamos a producir las mejores medialunas del barrio</h3>
+        <h3>Comunicate al <a href="tel:4797-9878">4797-9878</a> para hacer tu pedido</h3>
    </div>
+
+   
 
    <footer>
        <a href="https://www.instagram.com/pasteleriamariel/?hl=en"><img src="Imagenes/InstagramLogo.png" alt="Instagram" style="width:42px;height:42px;"></a>
