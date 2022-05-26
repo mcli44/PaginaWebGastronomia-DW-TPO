@@ -91,7 +91,7 @@ footer {
 
 .centrar{
     
-    height: auto;
+    height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -179,7 +179,7 @@ footer {
 .map-responsive iframe{
     
     width: 100%;
-    height: 450px;
+    height: 22em;
     margin-top: 4.3em;
     border:0;
 }
