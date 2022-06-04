@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <title>Presupuesto</title>
     <link rel="stylesheet" href="telefono.css">
 </head>
@@ -14,7 +15,7 @@
             <div class="dropdown-content">
               <a href="menu.html">Productos</a>
               <a href="direcion.html">Contacto y dirección</a>
-              <a href="#">Testimonios</a>
+              <a href="testimonio.html">Testimonios</a>
               <a href="presupuesto.html">Presupuesto</a> 
             </div>
         </div>
@@ -22,7 +23,7 @@
         
     </header>
     <div class="centrar">
-        <div class="pdm">
+        <form class="pdm">
             <h2>Obtener Presupuesto</h2>
             <div class="pacodiv">
                 <input class="pe1" type="text" autocomplete="nombre" maxlength="100" value="Nombre" onfocus="onFocus(this)" onblur="onBlur(this)"  required>
@@ -43,7 +44,7 @@
             
             <div class="pacodiv">
                 <div class="pb2">
-                    <input class="pb1" type="button" value="Enviar" onclick="msg()">
+                    <input class="pb1" type="submit" value="Enviar" onclick="msg()">
                 </div>
                 
             </div>
@@ -66,7 +67,7 @@
             }
             </script>
 
-        </div>   
+        </form>   
     </div>
 
 
