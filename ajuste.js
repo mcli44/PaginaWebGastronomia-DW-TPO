@@ -14,21 +14,12 @@ function creadorNAV(){
 
     let presu = document.createElement("a");
     presu.innerHTML = "PRESUPUESTO";
-    produc.href = "presupuesto.html";
+    presu.href = "presupuesto.html";
 
     menu.appendChild(produc);
     menu.appendChild(direc);
     menu.appendChild(presu);
     document.getElementById("cabecera").appendChild(menu);
-
-   /*document.body.appendChild(x);
-
-    var anchorElmnt = document.createElement("A");
-    anchorElmnt .setAttribute("href", "/html");
-    var txt1 = document.createTextNode("HTML");
-    anchorElmnt .appendChild(txt1);
-
-    x.appendChild(anchorElmnt);*/
 }
 
 function borrarBotones(){
