@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ajuste.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="telefono.css">
     <title>Nuestros Productos</title>
 </head>
 <body>
-    <header>
-        <div class="dropdown">
+    <header id="cabecera">
+        <div class="dropdown" id="desplegable">
             <button class="dropbtn"><strong>≡</strong></button>
             <div class="dropdown-content">
                 <a href="menu.html">Productos</a>
                 <a href="direcion.html">Contacto y dirección</a>
-                <a href="testimonio.html">Testimonios</a>
+                <!--<a href="testimonio.html">Testimonios</a>-->
                 <a href="presupuesto.html">Presupuesto</a> 
             </div>
         </div>
@@ -25,24 +26,28 @@
 
     <div class="ListadoMenu">
         <h2 class="LMp"><strong>FACTURAS Y PANADERIA</strong></h2>
-        <div>
-            <ul>
-                <div class="acomodarLi">
-                    <li class="aLi">Facturas de manteca</li>
-                    <img class="imgMenu" src="Imagenes/Medialunas de manteca 1080x1080.jpg" alt="Alta medialuna de manteca" style="width: 35%">
-                </div>
-                <div class="acomodarLi">
-                    <li class="aLi">Facturas de grasa</li>
-                    <img class="imgMenu" src="Imagenes/Medialunas de grasa 704x369.jpg" alt="Alta medialuna de grasa" style="width: 40%">
-                </div>
-                <div class="acomodarLi">
-                    <li class="aLi">Donas bañadas en chocolate<br>rellena de dulce de leche</li>
-                    <img class="imgMenu" src="Imagenes/donas 1080x1080.jpg" alt="Las donas que come Homero" style="width: 35%">
-                </div>            
-            </ul>
+        <div class="test">
+            <div class="acomodarLi">
+                <p class="aLi">Facturas de manteca</p>
+                <img class="imgMenu" src="Imagenes/Medialunas de manteca 1080x1080.jpg" alt="Alta medialuna de manteca">
+            </div>
+            <div class="acomodarLi">
+                <p class="aLi">Facturas de grasa</p>
+                <img class="imgMenu1" src="Imagenes/Medialunas de grasa 704x369.jpg" alt="Alta medialuna de grasa">
+            </div>
+            <div class="acomodarLi">
+                <p class="aLi">Donas bañadas en chocolate<br>rellena de dulce de leche</p>
+                <img class="imgMenu" src="Imagenes/donas 1080x1080.jpg" alt="Las donas que come Homero">
+            </div>            
         </div>
     </div>
     
+    <script>
+        let anchoVP = window.innerWidth;
+        if(anchoVP >= 1020){
+            creadorNAV();
+        }
+    </script>
 
     <footer>
         <a href="https://www.instagram.com/pasteleriamariel/?hl=en"><img src="Imagenes/InstagramLogo.png" alt="Instagram" style="width:42px;height:42px;"></a>

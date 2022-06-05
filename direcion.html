@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ajuste.js" type="text/javascript"></script>
     <link rel="stylesheet" href="telefono.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <title>Donde Encontrarnos</title>
 </head>
 <body>
-    <header>
-        <div class="dropdown">
+    <header id="cabecera">
+        <div class="dropdown" id="desplegable">
             <button class="dropbtn"><strong>≡</strong></button>
             <div class="dropdown-content">
                 <a href="menu.html">Productos</a>
                 <a href="direcion.html">Contacto y dirección</a>
-                <a href="testimonio.html">Testimonios</a>
+                <!--<a href="testimonio.html">Testimonios</a>-->
                 <a href="presupuesto.html">Presupuesto</a> 
             </div>
         </div>
@@ -35,6 +36,13 @@
         <h3>Abrimos Martes a Domingos de 7:00 a 19:00</h3>
         <h3>Comunicate al <a href="tel:4797-9878">4797-9878</a> para hacer tu pedido</h3>
     </div>
+
+    <script>
+        let anchoVP = window.innerWidth;
+        if(anchoVP >= 1020){
+            creadorNAV();
+        }
+    </script>
 
     <footer>
         <a href="https://www.instagram.com/pasteleriamariel/?hl=en"><img src="Imagenes/InstagramLogo.png" alt="Instagram" style="width:42px;height:42px;"></a>
