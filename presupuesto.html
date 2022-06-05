@@ -20,8 +20,9 @@
               <a href="presupuesto.html">Presupuesto</a> 
             </div>
         </div>
-        <a class="Nombre" href="index.html"><strong>Pastelería Forte</strong></a>
-        
+        <div class="Nombre">
+            <a href="index.html"><strong>Pastelería Forte</strong></a>
+        </div>        
     </header>
     <div class="centrar">
         <form class="pdm">
@@ -72,10 +73,13 @@
     </div>
 
     <script>
-        let anchoVP = window.innerWidth;
-        if(anchoVP >= 1020){
-            creadorNAV();
-        }
+        window.addEventListener("resize", function(){
+            let anchoVP = window.innerWidth;
+            if(anchoVP >= 1022){
+                creadorNAV();
+            }
+            
+        });
     </script>
 
     <footer>

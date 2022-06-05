@@ -22,7 +22,10 @@
               <a href="presupuesto.html">Presupuesto</a> 
             </div>
         </div>
-        <a class="Nombre" href="index.html"><strong>Pastelería Forte</strong></a>
+        <div class="Nombre">
+            <a href="index.html"><strong>Pastelería Forte</strong></a>
+        </div>
+        
         
         
     </header>
@@ -80,12 +83,29 @@
         <h3>Comunicate al <a href="tel:4797-9878">4797-9878</a> para hacer tu pedido</h3>
    </div>
 
-    <script>
-        let anchoVP = window.innerWidth;
-        if(anchoVP >= 1020){
-            creadorNAV();
-            borrarBotones();
+   <script>
+       let anchoVP = window.innerWidth;
+        if(anchoVP >= 1022){
+                creadorNAV();
+                borrarBotones();
         }
+   </script>
+
+    <script>
+        
+        window.addEventListener("resize", function(){
+            let anchoVP = window.innerWidth; 
+            if(anchoVP >= 1022){
+                reactivarMenu();
+                borrarBotones();
+            }
+            if(anchoVP < 1022){
+                reactivarDes();
+                reactivarBotones();
+            }
+        })
+            
+
     </script>
     <footer>
         <a href="https://www.instagram.com/pasteleriamariel/?hl=en"><img src="Imagenes/InstagramLogo.png" alt="Instagram" style="width:42px;height:42px;"></a>

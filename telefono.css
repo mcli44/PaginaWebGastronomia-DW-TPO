@@ -29,10 +29,13 @@ header{
     
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
-    text-decoration:none;
     width: 100%;
     padding-left: 1em;
     
+}
+
+.Nombre a{
+    text-decoration:none;
 }
 
 footer {
@@ -335,13 +338,15 @@ footer {
     }
 }
 
-@media (min-width: 860px) {   
+@media (min-width: 890px) {   
     .Nombre{
-        margin-left: 1.3em;
+        margin-left: 1.5em;
     }
 
 
 }
+
+
 
 /* tablets horizontal y laptops */
 
@@ -349,6 +354,7 @@ footer {
     .Nombre{
         margin-left: 1em;
         padding: 0;
+        width: 70%;
     }
 
     nav{
@@ -364,8 +370,16 @@ footer {
 
     nav a{
         text-decoration: none;
+        padding-left: 20px;
     }
 
+}
+
+@media (min-width: 1700px) {   
+    .Nombre{
+        width: 100%;
+        margin-left: 2em;
+    }
 }
 
 
