@@ -83,21 +83,27 @@
         <h3>Comunicate al <a href="tel:4797-9878">4797-9878</a> para hacer tu pedido</h3>
    </div>
 
-   <script>
-       let anchoVP = window.innerWidth;
+    <script>
+        let anchoVP = window.innerWidth;
         if(anchoVP >= 1022){
                 creadorNAV();
                 borrarBotones();
         }
-   </script>
+    </script>
 
     <script>
         
         window.addEventListener("resize", function(){
             let anchoVP = window.innerWidth; 
             if(anchoVP >= 1022){
-                reactivarMenu();
+                if(document.getElementById("navbar") != null){
+                    reactivarMenu();
+                }
+                else{
+                    creadorNAV();
+                }
                 borrarBotones();
+                
             }
             if(anchoVP < 1022){
                 reactivarDes();

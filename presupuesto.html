@@ -73,13 +73,30 @@
     </div>
 
     <script>
-        window.addEventListener("resize", function(){
-            let anchoVP = window.innerWidth;
-            if(anchoVP >= 1022){
+        let anchoVP = window.innerWidth;
+        if(anchoVP >= 1022){
                 creadorNAV();
+                borrarBotones();
+        }
+    </script>
+
+    <script>
+        window.addEventListener("resize", function(){
+            let anchoVP = window.innerWidth; 
+            if(anchoVP >= 1022){
+                if(document.getElementById("navbar") != null){
+                    reactivarMenu();
+                }
+                else{
+                    creadorNAV();
+                }
+                borrarBotones();
             }
-            
-        });
+            if(anchoVP < 1022){
+                reactivarDes();
+                reactivarBotones();
+            }
+        })
     </script>
 
     <footer>
