@@ -1,36 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="telefono.css">
+    <script src="ajuste.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <title>Testimonios</title>
 </head>
 <body>
-    <header>
-        <div class="dropdown">
+    <header id="cabecera">
+        <div class="dropdown" id="desplegable">
             <button class="dropbtn"><strong>≡</strong></button>
             <div class="dropdown-content">
-              <a href="menu.html">Productos</a>
+              <a href="menu.html">Nuestras Especialidades</a>
               <a href="direcion.html">Contacto y dirección</a>
               <a href="testimonio.html">Testimonios</a>
               <a href="presupuesto.html">Presupuesto</a> 
             </div>
         </div>
-        <a class="Nombre" href="index.html"><strong>Pastelería Forte</strong></a>
-        
-        
+        <div class="Nombre">
+            <a href="index.html"><strong>Pastelería Forte</strong></a>
+        </div>
+
     </header>
 
     <div class="centrar">
-        <div class="centrar">
+        <h1 class="tH1">TESTIMONIOS</h1>
+        <div class="toA1">
+            <div class="tA1">
+                <div class="tA2">
+                    <div class="tA3">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    
+                    <p>Hace 3 meses</p>
+                </div>
+                <blockquote cite="https://goo.gl/maps/Q5tA1cweMQg6QbnM8" class="tBQ1">
+                    <q class="tP1">Amo Mariel, soy cliente desde hace años. Las medialunas imperdibles, las tortas también. Calidad asegurada para cualquier tipo de ocasión ❤️</q>
+                </blockquote>
+                <div class="tdC1">
+                    <cite class="tC1"> <strong>-Maria B</strong></cite>
+                </div>
+            </div>
+            <div class="tA1">
+                <div class="tA2">
+                    <div class="tA3">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    
+                    <p>Hace 1 mes</p>
+                </div>
+                <blockquote cite="https://goo.gl/maps/rUpvK3hm7fUtfPBF6" class="tBQ1">
+                    <q class="tP1">LA MEJOR PANADERÍA DE OLIVOS!. Me encanta!. Voy siempre, los panes riquísimos al igual que las facturas. Precio calidad excelente </q>
+                </blockquote>
+                <div class="tdC1">
+                    <cite class="tC1"> <strong>-Agustina G</strong></cite>
+                </div>
+                
+            </div>
+            <div class="tA1">
+                <div class="tA2">
+                    <div class="tA3">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    
+                    <p>Hace 2 meses</p>
+                </div>
+                <blockquote cite="https://goo.gl/maps/FdcY84RAdQNkEMmj6" class="tBQ1">
+                    <q class="tP1">Muy buena pastelería. Tarta de manzanas es insuperable!! Las facturas muuuy ricas. Y siempre hay algo más para probar.</q>
+                </blockquote>
+                <div class="tdC1">
+                    <cite class="tC1"> <strong>-Daniel P</strong></cite>
+                </div>  
+            </div>
+
+            
+
+        </div>
+        <div class="BotoneraTesti">
+            <div class="contBotones">
+                <a class="btVerMas" href="https://search.google.com/local/reviews?placeid=ChIJ3eOanDexvJURXZx0h0HOOyc"><strong>Ver Mas</strong></a>
+            <a class="btEscribir" href="https://search.google.com/local/writereview?placeid=ChIJ3eOanDexvJURXZx0h0HOOyc"><strong>Escribe un comentario</strong></a>
+            </div>
             
         </div>
+
     </div>
+
+    <script>
+        let anchoVP = window.innerWidth;
+        if(anchoVP >= 1022){
+                creadorNAV();
+                borrarBotones();
+        }
+    </script>
+
+    <script>
+        
+        window.addEventListener("resize", function(){
+            let anchoVP = window.innerWidth; 
+            if(anchoVP >= 1022){
+                if(document.getElementById("navbar") != null){
+                    reactivarMenu();
+                }
+                else{
+                    creadorNAV();
+                }
+                borrarBotones();
+                
+            }
+            if(anchoVP < 1022){
+                reactivarDes();
+                reactivarBotones();
+            }
+        })
+            
+
+    </script>
 
     <footer>
         <a href="https://www.instagram.com/pasteleriamariel/?hl=en"><img src="Imagenes/InstagramLogo.png" alt="Instagram" style="width:42px;height:42px;"></a>

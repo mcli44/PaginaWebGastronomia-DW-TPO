@@ -1,11 +1,11 @@
-html{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+
 body{
     background: #f5f5dc;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 4em;
+    margin: 0;
 }
 
 header{
@@ -46,11 +46,12 @@ footer {
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
-    padding: 3px;
     background-color: rgb(255, 220, 177);
     color: rgb(94, 12, 161);
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-   
 }
 
 .dropbtn {
@@ -90,8 +91,6 @@ footer {
 .dropdown:hover .dropdown-content {display: block;}
 
 .centrar{
-    
-    height: fit-content;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -146,6 +145,13 @@ footer {
     width: 9.8em;
     display: flex;
     justify-content: center;
+    border-radius: 8px;
+    
+}
+
+.btMenu:hover {
+    background-color: #008CBA;
+    color: white;
 }
 
 .btDireccion{
@@ -156,6 +162,12 @@ footer {
     width: 10.1em;
     display: flex;
     justify-content: center;
+    border-radius: 8px;
+}
+
+.btDireccion:hover {
+    background-color: #008CBA;
+    color: white;
 }
 
 
@@ -179,8 +191,8 @@ footer {
 .ListadoMenu{
     display: flex;
     flex-direction: column;
-    justify-content:space-between ;
-    margin-bottom: 1.5em;
+    justify-content:space-between;
+    margin-top: 3.5em;
 }
 
 
@@ -193,6 +205,7 @@ footer {
     margin-top: 1.6em;
     border-style: double;
     width: 100%;
+    border-radius: 8px;
 }
 
 
@@ -208,17 +221,14 @@ footer {
 
 .imgMenu{
     /*background: red;*/
-    width: 35%;
+    width: 30%;
     
 }
 .imgMenu1{
     /*background: red;*/
-    width: 40%;
+    width: 35%;
 }
 
-.LMp{
-    margin-top: 3em;
-}
 
 .pdm{
     display: flex;
@@ -226,6 +236,7 @@ footer {
     margin-top: 1.8em;
     margin-bottom: 1.5em;
     width: 100%;
+    max-width: 800px;
 }
 
 .pe1{
@@ -262,6 +273,103 @@ footer {
     height: 25px;
 }
 
+.tH1{
+    margin-top: 1.6em;
+}
+
+.tA1{
+    margin-top: 1.3em;
+    width: 99%;
+    border-style: double;
+    margin-left: 0.3em;
+    border-radius: 8px;
+}
+
+.tA2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tA2 p{
+    margin-left: 1.5em;
+}
+.tA3{
+    margin-right: 1.5em;
+}
+
+.checked {
+    color: orange;
+}
+
+.tBQ1{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0.5;
+}
+
+.tdC1{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.tC1{
+    margin-left: 1em;
+    color: rgb(94, 12, 161);
+}
+
+
+.BotoneraTesti{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0.8em;
+    margin-top: 1.5em;
+}
+
+.contBotones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 600px;
+}
+
+.btVerMas{
+    background: rgb(255, 220, 177);
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(94, 12, 161);
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.btVerMas:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.btEscribir{
+    background: rgb(255, 220, 177);
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(94, 12, 161);
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.btEscribir:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
 
 /* Telefonos Horizontal */
 @media (max-width: 325px) {   
@@ -278,6 +386,17 @@ footer {
         padding: 5px;
         width: 7.5em;
     }
+
+    .btVerMas{
+        padding: 5px;
+        width: 6.5em;
+        align-items: center;
+    }
+    
+    .btEscribir{
+        padding: 5px;
+        width: 7.5em;
+    }
 }
 
 /*@media (min-width: 380px) {   
@@ -286,11 +405,14 @@ footer {
     }
 }*/
 
-/*@media (min-width: 405px) {   
-    .Nombre{
-        padding-left: 1.5em;
+@media (min-width: 405px) {   
+    .btEscribir{
+        width: 12em;
     }
-}*/
+    .btVerMas{
+        width: 12em;
+    }
+}
 
 /* Telefono acostado y tablets vertical*/
 
@@ -309,12 +431,44 @@ footer {
         justify-content: center;
     }
 
+    .LMp{
+        text-align: center;
+    }
+
+    
+
+    .moM1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .acomodarLi{
+        width: 80%;
+        max-width: 1000px;
+    }
+
     .imgMenu{
-        width: 18%;
+        width: 25%;
     }
 
     .imgMenu1{
-        width: 23%;
+        width: 28%;
+    }
+
+    .tA1{
+        width: 65%;
+        max-width: 900px;
+    }
+
+    .toA1{
+        display: flex;
+        flex-basis: 32%;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -340,6 +494,9 @@ footer {
         width: 25%;
     }
 
+    .poH2{
+        text-align: center;
+    }
 
 }
 
@@ -408,11 +565,11 @@ footer {
 
 @media(min-width: 1400px){
     .imgMenu{
-        width: 10%;
+        width: 15%;
     }
 
     .imgMenu1{
-        width: 15%;
+        width: 18%;
     }
 }
 
@@ -427,11 +584,11 @@ footer {
     }
 
     .imgMenu{
-        width: 10%;
+        width: 13%;
     }
 
     .imgMenu1{
-        width: 15%;
+        width: 17%;
     }
 }
 

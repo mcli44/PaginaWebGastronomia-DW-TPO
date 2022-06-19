@@ -7,7 +7,7 @@ function creadorNAV(){
     let menu = document.createElement("NAV");
     menu.id = "navbar"
     let produc = document.createElement("a");
-    produc.innerHTML = "PRODUCTOS";
+    produc.innerHTML = "NUESTRAS ESPECIALIDADES";
     produc.href = "menu.html";
 
     let direc = document.createElement("a");
@@ -18,8 +18,13 @@ function creadorNAV(){
     presu.innerHTML = "PRESUPUESTO";
     presu.href = "presupuesto.html";
 
+    let testi = document.createElement("a");
+    testi.innerHTML = "TESTIMONIOS";
+    testi.href = "testimonio.html";
+
     menu.appendChild(produc);
     menu.appendChild(direc);
+    menu.appendChild(testi);
     menu.appendChild(presu);
     document.getElementById("cabecera").appendChild(menu);
 }
