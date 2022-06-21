@@ -85,7 +85,7 @@ footer {
     z-index: 1;
 }
   
-  /* Links inside the dropdown */
+/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -101,7 +101,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2em;
     
 }
 
@@ -243,7 +242,7 @@ footer {
 .pdm{
     display: flex;
     flex-direction: column;
-    margin-top: 1.8em;
+    margin-top: 4em;
     margin-bottom: 1.5em;
     width: 100%;
     max-width: 800px;
@@ -284,7 +283,7 @@ footer {
 }
 
 .tH1{
-    margin-top: 1.6em;
+    margin-top: 2.5em;
 }
 
 .centro{

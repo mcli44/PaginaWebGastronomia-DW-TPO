@@ -25,18 +25,18 @@
         </div>        
     </header>
     <div class="centrar">
-        <form class="pdm">
+        <form id="formulario" class="pdm" onsubmit="return verificacionForm()">
             <h2 class="poH2">Obtener Presupuesto</h2>
             <div class="pacodiv">
-                <input class="pe1" type="text" autocomplete="on" maxlength="100" value="Nombre" onfocus="onFocus(this)" onblur="onBlur(this)"  required>
+                <input id="nombre" class="pe1" type="text" autocomplete="on" maxlength="100" value="Nombre" onfocus="onFocus(this)" onblur="onBlur(this)"  required>
             </div>
 
             <div class="pacodiv">
-                <input class="pe1" type="email" autocomplete="on" maxlength="100" value="Email" onfocus="onFocus(this)" onblur="onBlur(this)"  required>
+                <input id="mail" class="pe1" type="email" autocomplete="on" maxlength="100" value="Email" onfocus="onFocus(this)" onblur="onBlur(this)"  required>
             </div>
 
             <div class="pacodiv">
-                <input class="pe1" type="tel" autocomplete="on" maxlength="100" value="Numero de telefono" onfocus="onFocus(this)" onblur="onBlur(this)">
+                <input id="telefono" class="pe1" type="tel" autocomplete="on" maxlength="100" value="Numero de telefono" onfocus="onFocus(this)" onblur="onBlur(this)">
             </div>
 
             <div class="pacodiv">
@@ -63,12 +63,6 @@
                     }
                 }
             </script>
-            <script>
-            function msg() {
-                alert("Presupuesto enviado. Muchas gracias! :)");
-            }
-            </script>
-
         </form>   
     </div>
 

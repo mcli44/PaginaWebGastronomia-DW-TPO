@@ -54,3 +54,13 @@ function reactivarBotones(){
     const borrar1 = document.getElementById("botonesIndex");
     borrar1.style.display = "flex";
 }
+
+function verificacionForm(){
+    let bandera = true;
+
+    if(bandera = true){
+        alert("Presupuesto enviado. Muchas gracias! :)");
+    }
+   
+    
+}
