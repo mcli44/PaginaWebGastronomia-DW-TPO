@@ -25,7 +25,7 @@
         </div>        
     </header>
     <div class="centrar">
-        <form id="formulario" class="pdm" onsubmit="return verificacionForm()">
+        <form id="formulario" class="pdm">
             <h2 class="poH2">Obtener Presupuesto</h2>
             <div class="pacodiv">
                 <input id="nombre" class="pe1" type="text" autocomplete="on" maxlength="100" value="Nombre" onfocus="onFocus(this)" onblur="onBlur(this)"  required>
@@ -41,12 +41,12 @@
 
             <div class="pacodiv">
                 <label for="Des" class="pp1">¿Como podemos ayudarte?</label>
-                <textarea id="Des" class="pe2" autocomplete="on" data-max-rows="3" placeholder="Me gustaría obtener información sobre la disponibilidad y los precios. Necesito ayuda con lo siguiente:" onfocus="onFocus(this)" onblur="onBlur(this)"  required></textarea>
+                <textarea id="texto" class="pe2" autocomplete="on" data-max-rows="3" placeholder="Me gustaría obtener información sobre la disponibilidad y los precios. Necesito ayuda con lo siguiente:" onfocus="onFocus(this)" onblur="onBlur(this)"  required></textarea>
             </div>
             
             <div class="pacodiv">
                 <div class="pb2">
-                    <input class="pb1" type="submit" value="Enviar" onclick="msg()">
+                    <input class="pb1" type="submit" value="Enviar" onclick="verificacionForm(this.form)">
                 </div>
                 
             </div>

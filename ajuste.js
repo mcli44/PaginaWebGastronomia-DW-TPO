@@ -55,11 +55,24 @@ function reactivarBotones(){
     borrar1.style.display = "flex";
 }
 
-function verificacionForm(){
-    let bandera = true;
+function verificacionForm(form){
 
-    if(bandera = true){
-        alert("Presupuesto enviado. Muchas gracias! :)");
+    let nomb = form.nombre.value;
+    String(nomb);
+
+    let textoAux = form.texto.value;
+    String(textoAux);
+    
+    if(/^[a-zA-Z.,]+$/.test(nomb) == true){
+        if(textoAux != ""){
+            alert("Presupuesto enviado. Muchas gracias! :)");
+        }
+        
+        
+    }
+    else{
+        alert("Ingresa un nombre correcto");
+        event.preventDefault();
     }
    
     
