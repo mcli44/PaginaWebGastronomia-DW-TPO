@@ -63,7 +63,7 @@ function verificacionForm(form){
     let textoAux = form.texto.value;
     String(textoAux);
     
-    if(/^[a-zA-Z.,]+$/.test(nomb) == true){
+    if(/^[a-zA-Z]+$/.test(nomb) == true){
         if(textoAux != ""){
             alert("Presupuesto enviado. Muchas gracias! :)");
         }
