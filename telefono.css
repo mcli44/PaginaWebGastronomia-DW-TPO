@@ -177,6 +177,16 @@ footer {
     color: white;
 }
 
+.iHP{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iHP h3{
+    margin-left: 0.5em;
+    margin-right: 0.3em;
+}
 
 .map-responsive{
     
