@@ -114,6 +114,8 @@ footer {
     max-width: 100%;
     position: relative;
     margin: auto;
+    margin-top: 2.8em;
+    
 }
 
 .active {
@@ -536,6 +538,10 @@ footer {
 
     .Nombre a{
         margin-left: 1.2em;
+    }
+
+    .imgLocal{
+        max-width: 700px;
     }
 
     nav{
