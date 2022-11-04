@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emi Eventos</title>
+    <script src="ajuste.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="elcss.css">
+</head>
+<body>
+    <header id="cabecera">
+        <span id="botonnav" class="botonNav" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="MenuX">
+            <a  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        
+        <div class="opcionesMenu">
+            <a href="index.html"><img src="Imagenes/hogarblanco.png" alt="Imghome" style="width: 20px;height:20px;"> Inicio</a>
+        </div>
+        <div class="opcionesMenu">
+            <a href="servicios.html"> <img src="Imagenes/wedding-arch.png" alt="ImgServ" style="width: 20px;height:20px;"> Servicios</a>
+        </div>
+        <!--<div class="opcionesMenu">
+            <a href="#" > <img src="Imagenes/contactos.png" alt="ImgCoTrab" style="width: 20px;height:20px;"> Como <br>  Trabajamos</a>
+        </div>-->
+        <div class="opcionesMenu">
+            <a href="galeria.html"> <img src="Imagenes/galeriablanca.png" alt="ImgGal" style="width: 20px;height:20px;"> Galeria</a>
+        </div>
+        <div class="opcionesMenu">
+            <a href="contacto.html" style="color: #d1a44e;"> <img src="Imagenes/contactodorado.png" alt="ImgCont" style="width: 20px;height:20px;"> Contacto</a>
+        </div>
+    </div>
+
+    <div class="centrar">
+        <h1 id="inicioPagina" class="h1G">Contactos</h1>
+        <p class="cp1">&#8595 Contactanos por &#8595</p>
+        <div class="boton">
+            <button id="WP" type="button" onclick="location.href='https://wa.me/+541137892222/?text=probando%20como%20funciona'"><img src="Imagenes/whatsapp512px.png" alt="Whatsapp" style="width: 32px;height:32px;"> <strong>Whatsapp</strong></button>
+        </div>
+        <div class="boton">
+            <a id="Tel" href="tel:4797-9878"><img src="Imagenes/llamada.png" alt="Telefono" style="width: 32px;height:32px;"> <strong>Telefono</strong></a>
+        </div>
+        <!--<p class="cp1">&#8595 Contactanos por Email &#8595</p>
+        <p>Email: <strong>ponerEmail</strong><br>Asunto: <strong>asunto</strong></p>-->
+        <!--<div class="botonWP">
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjfvLXlvFzlzNstJdbclnLMJSKklHsnBsgcsjHLkxkcpjDKGNnZVNJgnGjzBdDBtjFnmpq"><img src="Imagenes/whatsapp512px.png" alt="Whatsapp" style="width: 32px;height:32px;"> <strong>Whatsapp</strong></a>
+        </div>-->
+        <p class="cp1">&#8595 Seguinos en  &#8595</p>
+        <div class="boton">
+            <button id="FB" type="button" onclick="location.href='https://www.facebook.com/emiieventos'"><img src="Imagenes/facebook512px.png" alt="Facebook" style="width: 32px;height:32px;"> <strong>Facebook</strong></button>
+        </div>
+        <div class="boton">
+            <button id="IG" type="button" onclick="location.href='https://www.facebook.com/emiieventos'"><img src="Imagenes/instagram512px.png" alt="Instagram" style="width: 32px;height:32px;"> <strong>Instagram</strong></button>
+        </div>
+        <!--<p class="cp1">&#8595 Seguinos en Instagram &#8595</p>-->
+        
+        <!--<p class="cp1">&#8595 Contactanos por Telefono &#8595</p>-->
+        
+    
+        
+    </div>
+    
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "255px";
+          document.getElementById("botonnav").style.display = "none";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("botonnav").style.display = "flex";
+        }
+    </script>
+
+    
+    <script>
+        let anchoVP = window.innerWidth;
+        if(anchoVP >= 1022){
+                creadorNAV();
+        }
+    </script>
+
+    <script>
+        
+        window.addEventListener("resize", function(){
+            let anchoVP = window.innerWidth; 
+            if(anchoVP >= 1022){
+                if(document.getElementById("navbar") != null){
+                    reactivarMenu();
+                }
+                else{
+                    creadorNAV();
+                }
+                
+            }
+            if(anchoVP < 1022){
+                reactivarDes();
+            }
+        })
+            
+
+    </script>
+
+    <footer>
+        <div class="IconosFooter">
+            <a href="https://wa.me/+541137892222/?text=probando%20como%20funciona"><img src="Imagenes/whatsapp512px.png" alt="Whatsapp" style="width: 24px;"></a>
+            <a href="#"><img src="Imagenes/instagram512px.png" alt="Instagram" style="width: 24px;"></a>
+            <a href="https://www.facebook.com/emiieventos"><img src="Imagenes/facebook512px.png" alt="Facebook" style="width: 24px;"></a>
+        </div>
+        <div class="CopyFooter">
+            <a href="copyright.html">&copy;</a>
+        </div>
+        
+    </footer>
+</body>
+
+</html>

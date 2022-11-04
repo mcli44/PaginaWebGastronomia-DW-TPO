@@ -4,93 +4,155 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="telefono.css">
+    <title>Emi Eventos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="elcss.css">
     <script src="ajuste.js"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <title>Panaderia Forte</title>
 </head>
 <body>
     <header id="cabecera">
-        <div class="dropdown" id="desplegable">
-            <button class="dropbtn"><strong>≡</strong></button>
-            <div class="dropdown-content">
-              <a href="menu.html">Nuestras Especialidades</a>
-              <a href="direcion.html">Contacto y dirección</a>
-              <a href="testimonio.html">Testimonios</a>
-              <a href="presupuesto.html">Presupuesto</a> 
-            </div>
-        </div>
-        <div class="Nombre">
-            <a href="index.html"><strong>Pastelería Forte</strong></a>
-        </div>
-        
-        
-        
+        <span id="botonnav" class="botonNav" onclick="openNav()">&#9776;</span>
     </header>
-    <div class="centrar">
 
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img class="imgLocal" src="Imagenes/Foto-del-local.jpg" alt="Foto del local">
-            </div>
-            <div class="mySlides fade">
-                <img class="imgLocal" src="Imagenes/facturas-1080x1080.jpg" alt="Foto de facturas">
-            </div>
-            <div class="mySlides fade">
-                <img class="imgLocal" src="Imagenes/pastafrola-960x960.jpg" alt="Foto de pastafrola">
-            </div>
-            <div class="mySlides fade">
-                <img class="imgLocal" src="Imagenes/Alfajores-960x960.jpg" alt="Foto de alfajores">
-            </div>
-            <div class="mySlides fade">
-                <img class="imgLocal" src="Imagenes/Galletita-525x525.jpg" alt="Foto de galletitas">
-            </div>
-            <div class="mySlides fade">
-                <img class="imgLocal" src="Imagenes/Cubanitos-636x636.jpg" alt="Foto de cubanitos">
-            </div>
-            <script>
-                let slideIndex = 0;
-                showSlides();
-                
-                function showSlides() {
-                  let i;
-                  let slides = document.getElementsByClassName("mySlides");
-                  for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                  }
-                  slideIndex++;
-                  if (slideIndex > slides.length) {slideIndex = 1}    
-                  
-                  slides[slideIndex-1].style.display = "flex";
-                   
-                  setTimeout(showSlides, 3500); 
-                }
-            </script>
-        </div>
-
-        <h1 class="nombreLocal">Pasteleria Forte</h1>
-        <div class="BotoneraIndex" id="botonesIndex">
-            <a class="btMenu" href="menu.html"><strong>Nuestros Productos</strong></a>
-            <a class="btDireccion" href="direcion.html"><strong>Donde Encontrarnos</strong></a>
-        </div>
-
-       
-        <div class="iHP">
-            <h1><strong>SOBRE NOSOTROS</strong></h1>
-            <h3>En Pasteleria Forte tenemos exquistas medialunas, tortas de todos los sabores y los mejores sanguchitos para tus eventos</h3>
-            <h3>Comunicate al <a href="tel:4797-9878">4797-9878</a> para hacer tu pedido</h3>
+    <div id="mySidenav" class="sidenav">
+        <div class="MenuX">
+            <a  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         </div>
         
-   </div>
+        <div class="opcionesMenu">
+            <a href="index.html" style="color: #d1a44e;"><img src="Imagenes/hogardorado.png" alt="Imghome" style="width: 20px;height:20px;"> Inicio</a>
+        </div>
+        <div class="opcionesMenu">
+            <a href="servicios.html"> <img src="Imagenes/wedding-arch.png" alt="ImgServ" style="width: 20px;height:20px;"> Servicios</a>
+        </div>
+        <!--<div class="opcionesMenu">
+            <a href="#" > <img src="Imagenes/contactos.png" alt="ImgCoTrab" style="width: 20px;height:20px;"> Como <br>  Trabajamos</a>
+        </div>-->
+        <div class="opcionesMenu">
+            <a href="galeria.html"> <img src="Imagenes/galeriablanca.png" alt="ImgGal" style="width: 20px;height:20px;"> Galeria</a>
+        </div>
+        <div class="opcionesMenu">
+            <a href="contacto.html"> <img src="Imagenes/contactoblanco.png" alt="ImgCont" style="width: 20px;height:20px;"> Contactos</a>
+        </div>
+    </div>
+
+
+
+    <div class="centrar">
+        <div class="Nombre">
+            <img src="Imagenes/LogomejorSF.png" alt="Nombre">
+        </div>
+
+        <div class="serviciosIndex">
+            <h2>Nuestros Servicios</h2>
+            <p>Resumen corto sobre servicios</p>
+            <div class="botonSI">
+                <button type="button" onclick="location.href='servicios.html'"><strong>Servicios</strong></button>    
+            </div>
+        </div>
+        
+        
+
+        <a href="galeria.html" style="text-decoration: none;color: black;cursor: pointer;"><h2>Galeria</h2></a>
+        <a href="galeria.html">
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img src="Imagenes/foto-evento1.jpg" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="Imagenes/foto-evento2.jpg" style="width:100%">
+                    <div class="text">Caption 2</div>
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="Imagenes/foto-evento3.jpg" style="width:100%">
+                    <div class="text">Caption 1</div>
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </a>
+
+        <div class="texto">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Escribir un texto sobre que es Emi Eventos. <br> Escribir cualidades positivas de Emi eventos.</p>
+        </div>
+        <div class="botonCI">
+            <button type="button" onclick="location.href='contacto.html'"><strong>Contactanos</strong></button>
+        </div>
+        
+    </div>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "255px";
+          document.getElementById("botonnav").style.display = "none";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("botonnav").style.display = "flex";
+        }
+    </script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+
+            slides[slideIndex-1].style.display = "block";
+        }
+
+        function plusSlides(n){
+            clearInterval(myTimer);
+            if (n < 0){
+                showSlides(slideIndex -= 1);
+            } 
+            else {
+                showSlides(slideIndex += 1); 
+            }
+            if (n === -1){
+                myTimer = setInterval(function(){plusSlides(n + 2)}, 3500);
+            } 
+            else {
+                myTimer = setInterval(function(){plusSlides(n + 1)}, 3500);
+            }
+        }
+
+        window.addEventListener("load",function() {
+            showSlides(slideIndex);
+            myTimer = setInterval(function(){plusSlides(1)}, 3500);
+        })
+
+    </script>
 
     <script>
         let anchoVP = window.innerWidth;
         if(anchoVP >= 1022){
                 creadorNAV();
-                borrarBotones();
         }
     </script>
 
@@ -105,20 +167,27 @@
                 else{
                     creadorNAV();
                 }
-                borrarBotones();
                 
             }
             if(anchoVP < 1022){
                 reactivarDes();
-                reactivarBotones();
             }
         })
             
 
     </script>
+
     <footer>
-        <a href="https://www.instagram.com/pasteleriamariel/?hl=en"><img src="Imagenes/InstagramLogo.png" alt="Instagram" style="width:42px;height:42px;"></a>
-        <p>Autor: Agustin Forti</p>
+        <div class="IconosFooter">
+            <a href="https://wa.me/+541137892222/?text=probando%20como%20funciona"><img src="Imagenes/whatsapp512px.png" alt="Whatsapp" style="width: 24px;"></a>
+            <a href="#"><img src="Imagenes/instagram512px.png" alt="Instagram" style="width: 24px;"></a>
+            <a href="https://www.facebook.com/emiieventos"><img src="Imagenes/facebook512px.png" alt="Facebook" style="width: 24px;"></a>
+        </div>
+        <div class="CopyFooter">
+            <a href="copyright.html">&copy;</a>
+        </div>
+        
     </footer>
+    <!-- #aaa6c7 fondo-->
 </body>
 </html>

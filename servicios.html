@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emi Eventos</title>
+    <script src="ajuste.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="elcss.css">
+</head>
+<body>
+    <header id="cabecera">
+        <span id="botonnav" class="botonNav" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="MenuX">
+            <a  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        
+        <div class="opcionesMenu">
+            <a href="index.html"><img src="Imagenes/hogarblanco.png" alt="Imghome" style="width: 20px;height:20px;"> Inicio</a>
+        </div>
+        <div class="opcionesMenu">
+            <a href="servicios.html" style="color: #d1a44e;"> <img src="Imagenes/arcodorado.png" alt="ImgServ" style="width: 20px;height:20px;"> Servicios</a>
+        </div>
+        <!--<div class="opcionesMenu">
+            <a href="#" > <img src="Imagenes/contactos.png" alt="ImgCoTrab" style="width: 20px;height:20px;"> Como <br>  Trabajamos</a>
+        </div>-->
+        <div class="opcionesMenu">
+            <a href="galeria.html"> <img src="Imagenes/galeriablanca.png" alt="ImgGal" style="width: 20px;height:20px;"> Galeria</a>
+        </div>
+        <div class="opcionesMenu">
+            <a href="contacto.html"> <img src="Imagenes/contactoblanco.png" alt="ImgCont" style="width: 20px;height:20px;"> Contacto</a>
+        </div>
+    </div>
+
+    <div class="centrar">
+        <h1 id="inicioPagina" class="h1G">Servicios</h1>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Servicios &#x25BE;</button>
+            <div id="myDropdown" class="dropdown-content">
+                <button type="button" onclick="location.href='#servicio2'"><strong>servicio2</strong></button>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div id="servicio1" class="d1S">
+            <h2>Servicio 1</h2>
+            <p>Descripcion de servicio 1</p>
+            <img src="Imagenes/foto-evento4.jpg" alt="foto servicio 1" class="img1S">
+        </div>
+        <div id="servicio1" class="d1S">
+            <h2>Servicio 1</h2>
+            <p>Descripcion de servicio 1</p>
+            <img src="Imagenes/foto-evento4.jpg" alt="foto servicio 1" class="img1S">
+        </div>
+        <div id="servicio1" class="d1S">
+            <h2>Servicio 1</h2>
+            <p>Descripcion de servicio 1</p>
+            <img src="Imagenes/foto-evento4.jpg" alt="foto servicio 1" class="img1S">
+        </div>
+        <div id="servicio1" class="d1S">
+            <h2>Servicio 1</h2>
+            <p>Descripcion de servicio 1</p>
+            <img src="Imagenes/foto-evento4.jpg" alt="foto servicio 1" class="img1S">
+        </div>
+        <div id="servicio1" class="d1S">
+            <h2>Servicio 1</h2>
+            <p>Descripcion de servicio 1</p>
+            <img src="Imagenes/foto-evento4.jpg" alt="foto servicio 1" class="img1S">
+        </div>
+        <div id="servicio1" class="d1S">
+            <h2>Servicio 1</h2>
+            <p>Descripcion de servicio 1</p>
+            <img src="Imagenes/foto-evento4.jpg" alt="foto servicio 1" class="img1S">
+        </div>
+        <div id="servicio2" class="d1S">
+            <h2>Servicio 1</h2>
+            <p>Descripcion de servicio 1</p>
+            <img src="Imagenes/foto-evento4.jpg" alt="foto servicio 1" class="img1S">
+        </div>
+
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("myDropdown").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+        </script>
+        
+
+    </div>
+    
+    <script>
+        let anchoVP = window.innerWidth;
+        if(anchoVP >= 1022){
+                creadorNAV();
+        }
+    </script>
+
+    <script>
+        
+        window.addEventListener("resize", function(){
+            let anchoVP = window.innerWidth; 
+            if(anchoVP >= 1022){
+                if(document.getElementById("navbar") != null){
+                    reactivarMenu();
+                }
+                else{
+                    creadorNAV();
+                }
+                
+            }
+            if(anchoVP < 1022){
+                reactivarDes();
+            }
+        })
+            
+
+    </script>
+    <footer>
+        <div class="IconosFooter">
+            <a href="https://wa.me/+541137892222/?text=probando%20como%20funciona"><img src="Imagenes/whatsapp512px.png" alt="Whatsapp" style="width: 24px;"></a>
+            <a href="#"><img src="Imagenes/instagram512px.png" alt="Instagram" style="width: 24px;"></a>
+            <a href="https://www.facebook.com/emiieventos"><img src="Imagenes/facebook512px.png" alt="Facebook" style="width: 24px;"></a>
+        </div>
+        <div class="CopyFooter">
+            <a href="copyright.html">&copy;</a>
+        </div>
+        
+    </footer>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "255px";
+          document.getElementById("botonnav").style.display = "none";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("botonnav").style.display = "flex";
+        }
+    </script>
+</body>
+</html>

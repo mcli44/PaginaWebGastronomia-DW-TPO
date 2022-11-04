@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <script src="ajuste.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="elcss.css">
+</head>
+<body>
+    <header id="cabecera">
+        <span id="botonnav" class="botonNav" onclick="openNav()">&#9776;</span>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <div class="MenuX">
+            <a  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+        
+        <div class="opcionesMenu">
+            <a href="index.html"><img src="Imagenes/hogarblanco.png" alt="Imghome" style="width: 20px;height:20px;"> Inicio</a>
+        </div>
+        <div class="opcionesMenu">
+            <a href="servicios.html"> <img src="Imagenes/wedding-arch.png" alt="ImgServ" style="width: 20px;height:20px;"> Servicios</a>
+        </div>
+        <!--<div class="opcionesMenu">
+            <a href="#" > <img src="Imagenes/contactos.png" alt="ImgCoTrab" style="width: 20px;height:20px;"> Como <br>  Trabajamos</a>
+        </div>-->
+        <div class="opcionesMenu">
+            <a href="galeria.html" style="color: #d1a44e;"> <img src="Imagenes/galeriadorada.png" alt="ImgGal" style="width: 20px;height:20px;"> Galeria</a>
+        </div>
+        <div class="opcionesMenu">
+            <a href="contacto.html"> <img src="Imagenes/contactoblanco.png" alt="ImgCont" style="width: 20px;height:20px;"> Contacto</a>
+        </div>
+    </div>
+
+    <div class="centrar">
+        <h1 id="inicioPagina" class="h1G">Galeria</h1>
+        <div id="RefImg1" class="divGaleria">
+            <img src="Imagenes/foto-evento1.jpg">
+        </div>
+        <div id="RefImg2" class="divGaleria">
+            <img src="Imagenes/foto-evento1.jpg">
+        </div>
+        <div id="RefImg3" class="divGaleria">
+            <img src="Imagenes/foto-evento1.jpg">
+        </div>
+        <div id="RefImg4" class="divGaleria">
+            <img src="Imagenes/foto-evento1.jpg">
+        </div>
+        <div id="RefImg5" class="divGaleria">
+            <img src="Imagenes/foto-evento1.jpg">
+        </div>
+        <div id="RefImg6" class="divGaleria">
+            <img src="Imagenes/foto-evento1.jpg">
+        </div>
+        <div id="RefImg6" class="divGaleria">
+            <img src="Imagenes/foto-evento1.jpg">
+        </div>
+        <div id="RefImg7" class="divGaleria">
+            <img src="Imagenes/foto-evento1.jpg">
+        </div>
+        <!--<button type="button" class="botonHaciaIP" onclick="location.href='#inicioPagina'">&#8593</button>-->
+         
+    </div>
+    
+    
+    <script>
+        let anchoVP = window.innerWidth;
+        if(anchoVP >= 1022){
+                creadorNAV();
+        }
+    </script>
+
+    <script>
+        
+        window.addEventListener("resize", function(){
+            let anchoVP = window.innerWidth; 
+            if(anchoVP >= 1022){
+                if(document.getElementById("navbar") != null){
+                    reactivarMenu();
+                }
+                else{
+                    creadorNAV();
+                }
+                
+            }
+            if(anchoVP < 1022){
+                reactivarDes();
+            }
+        })
+            
+
+    </script>
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "255px";
+          document.getElementById("botonnav").style.display = "none";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("botonnav").style.display = "flex";
+        }
+    </script>
+
+    <footer>
+        <div class="IconosFooter">
+            <a href="https://wa.me/+541137892222/?text=probando%20como%20funciona"><img src="Imagenes/whatsapp512px.png" alt="Whatsapp" style="width: 24px;"></a>
+            <a href="#"><img src="Imagenes/instagram512px.png" alt="Instagram" style="width: 24px;"></a>
+            <a href="https://www.facebook.com/emiieventos"><img src="Imagenes/facebook512px.png" alt="Facebook" style="width: 24px;"></a>
+        </div>
+        <div class="CopyFooter">
+            <a href="copyright.html">&copy;</a>
+        </div>
+    </footer>
+</body>
+</html>

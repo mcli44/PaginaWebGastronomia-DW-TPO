@@ -1,0 +1,598 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2em;
+  margin: 0;
+  background-image: url("Imagenes/FondoTurquesa.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  /*background-color: #aaa6c7;*/
+  font-family: 'Poppins', sans-serif;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 3.5em;
+  /*background-color: #6785B1;*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow:visible;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  z-index: 1;
+}
+
+.centrar{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  background-color: #3174cd;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  justify-content: flex-start;
+}
+
+.IconosFooter{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.IconosFooter a{
+  height: 24px;
+  cursor:pointer;
+}
+
+.CopyFooter{
+  
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  
+}
+
+.CopyFooter a{
+  margin-right: 0.8em;
+  text-decoration: none;
+  cursor:pointer;
+  color: white;
+}
+
+
+
+.botonNav{
+  font-size:30px;
+  cursor:pointer;
+  margin-right: 0.5em;
+}
+
+.botonNav:hover{
+  color: white;
+  background-color: #2f227c;
+  opacity: 0.85;
+  border-radius: 20px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  opacity: 0.95;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.MenuX{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.3s;
+  margin-bottom: 0.5em;
+  
+}
+
+.MenuX a{
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+}
+
+.MenuX a:hover{
+  background-color: #2f227c;
+  border-radius: 20px;
+}
+
+.opcionesMenu{
+  margin-bottom: 1em;
+  width: fit-content;
+  margin-left: 30px;
+  transition: 0.3s;
+}
+
+
+.opcionesMenu a{
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  padding: 7px 10px 7px 10px;
+  text-size-adjust: none;
+}
+
+.opcionesMenu:hover{
+  background-color: #2f227c;
+  border-radius: 20px;
+}
+  
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+.Nombre{
+  /*background-color: rgb(0, 156, 177);*/
+    
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  max-width: 720px;   
+    
+}
+
+.Nombre img{
+  width: 50%;
+  margin-top: 0.3em;
+}
+
+.serviciosIndex{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviciosIndex h2{
+  margin-top: 0;
+  margin-bottom: 0.75em;
+}
+
+.serviciosIndex p{
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.botonSI{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.85em;
+}
+
+.botonSI button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100px;
+  background-color:#3a90fd;
+  height: 45px;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-size:medium;
+  cursor:pointer;
+}
+
+.botonSI button:hover{
+  background-color: #2f227c;
+  color: white;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 50px 50px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 50px 0 0 50px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.texto{
+  width: 100%;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.botonCI{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.botonCI button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 150px;
+  background-color: #3a90fd;
+  height: 45px;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-size:medium;
+}
+
+.botonCI button:hover{
+  background-color: #2f227c;
+  color: white;
+}
+
+.h1G{
+  margin-top: 0.28em;
+}
+
+.divGaleria{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.divGaleria img{
+  width: 95%;
+  height: auto;
+}
+
+.botonHaciaIP{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
+
+}
+
+.boton{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  margin-top: 0.2em;
+}
+
+.boton button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 45px;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-size:medium;
+}
+
+#WP{
+  width: 180px;
+  background-color: #25D366;
+}
+
+#WP:hover{
+  background-color: #075E54;
+  color: white;
+}
+
+.cp1{
+  font-size: large;
+  margin-top: 1em;
+}
+
+.boton a{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 150px;
+  background-color: #75bef8;
+  height: 45px;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-size:medium;
+  text-decoration: none;
+}
+
+#Tel:hover{
+  background-color: #2196f3;
+  color: white;
+}
+
+#FB{
+  width: 180px;
+  background-color: #70AAE2;
+}
+
+#FB:hover{
+  background-color: #1C74D4;
+  color: white;
+}
+
+#IG{
+  width: 160px;
+  background-color: #d148ad;
+}
+
+#IG:hover{
+  background-color: #e54673;
+  color: white;
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  width: 110px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 110px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content button {
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  padding: 12px 16px;
+  border: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size:small;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown button:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.d1S{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5em;
+}
+
+.d1S h2{
+  margin-top: 1em;
+  margin-bottom: 0.1em;
+}
+
+.img1S{
+  width: 100%;
+  height: auto;
+        
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+@media (min-width: 760px) {   
+
+  .botonNav{
+    font-size: 38px;
+    margin-top: 0.3em;
+    margin-right: 0.55em;
+  }
+
+  .MenuX a{
+    font-size: 35px;
+  }
+
+  .opcionesMenu a{
+    font-size: 35px;
+  }
+
+  .sidenav .closebtn{
+    font-size: 40px;
+  }
+
+  .IconosFooter{
+    justify-content: flex-start;
+  }
+
+  .IconosFooter a{
+    margin-left: 3.2em;
+  }
+
+  .img1S{
+    max-width: 700px;
+    max-height: 700px;
+  }
+
+  .slideshow-container{
+    max-width: 800px;
+  }
+
+  .divGaleria{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .divGaleria img{
+    max-width: 700px;
+  }
+
+}
+
+
+
+
+@media (min-width: 1022px){
+
+  header{
+    width: 100%;
+    position:static;
+  }
+
+  nav{
+    font-size: 23px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav a{
+    text-decoration: none;
+    padding: 8px;
+    margin-left: 1.5em;
+    color: rgb(0, 0, 0);
+  }
+
+  nav a:hover{
+    background-color: #2f227c;
+    opacity: 0.85;
+    border-radius: 20px;
+    color: white;
+  }
+
+
+  .imgIni{
+    margin-right: 0.25em;
+  }
+}
+    
